@@ -1,0 +1,17 @@
+{
+  "name": "reload-onchange",
+  "version": "1.0.0",
+  "description": "Reloads selected browser tab when given file(s) or directory changes",
+  "main": "./bin/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Prathamesh Shiralkar",
+  "license": "ISC",
+  "bin": "./bin/app.js",
+  "dependencies": {
+    "http-cors": "^2.0.0",
+    "node-watch": "^0.6.3",
+    "yargs": "^15.3.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Reload onchange",
+  "version": "1.0",
+  "description": "Reload selected browser tab when given file(s) or directory changes!",
+  "manifest_version": 2,
+  "permissions": [
+    "declarativeContent",
+    "activeTab",
+    "storage",
+    "alarms"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "bg.js", "jquery.min.js"
+    ],
+    "persistent": false
+  }
+}
