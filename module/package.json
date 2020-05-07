@@ -8,10 +8,24 @@
   },
   "author": "Prathamesh Shiralkar",
   "license": "ISC",
-  "bin": "./bin/app.js",
+  "bin": {
+    "reload-onchange": "bin/app.js"
+  },
   "dependencies": {
     "http-cors": "^2.0.0",
     "node-watch": "^0.6.3",
     "yargs": "^15.3.1"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnshiralkar/reload-onchange.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pnshiralkar/reload-onchange/issues"
+  },
+  "homepage": "https://github.com/pnshiralkar/reload-onchange#readme"
 }

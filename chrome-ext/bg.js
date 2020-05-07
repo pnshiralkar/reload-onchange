@@ -37,6 +37,10 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 function activate(port, tab) {
     console.log('port ', port, ' tab ', tab)
+    chrome.alarms.get('check', (a)=>{
+        if(!a)
+            chrome.alarms.create('check', {when: Date.now() + 500})
+    })
     if (!activatedTabs[port])
         activatedTabs[port] = []
     activatedTabs[port].push(tab)
@@ -88,3 +92,13 @@ chrome.extension.onConnect.addListener(function (port) {
 
     });
 })
+
+/*
+Many a times, we want to reload a webpage when files change (say, when backend server changes). This extension automatically reloads webpage when given files change.
+
+Needs npm package reload-onchange (https://www.npmjs.com/package/reload-onchange)
+To install this package, run npm i -g reload-onchange
+
+Run reload-onchange /path/to/watch and turn on this extension on chrome tab you want to reload.
+Run reload-onchange --help for more!
+ */
